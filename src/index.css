@@ -1,0 +1,32 @@
+#touppercasebtn{
+  background-color: rgb(42, 92, 241);
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px;
+  margin-right: 18px;
+}
+#clearbtn{
+  background-color: rgb(42, 92, 241);
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px;
+  margin-right: 18px;
+}
+#speak{
+  background-color: rgb(42, 92, 241);
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px;
+  margin-right: 18px;
+}
+#copybtn{
+  background-color: rgb(42, 92, 241);
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px;
+  margin-right: 18px;
+}
