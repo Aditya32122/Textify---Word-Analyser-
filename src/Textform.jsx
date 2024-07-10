@@ -36,7 +36,11 @@ function Textform(props){
         msg.text = text;
         window.speechSynthesis.speak(msg);
       }
-
+      const handleExtraSpaces = () => {
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" "));
+        props.showAlert("Extra spaces removed!", "success");
+    }
   
    
     return(
@@ -51,7 +55,7 @@ function Textform(props){
                 <button id="clearbtn" onClick={handleclear}>Clear Text</button>
                 <button id="copybtn" onClick={handlecopy}>Copy Text</button>
                 <button id="speak" onClick={speak} >Speak</button>
-           
+                <button id="extraspaces" disabled={text.length===0} onClick={handleExtraSpaces}>Remove Extra Spaces</button>
 
 </div>
         </div>

@@ -1,32 +1,45 @@
 #touppercasebtn{
-  background-color: rgb(42, 92, 241);
+  background-color: rgb(12, 87, 247);
   border-radius: 20px;
   color: rgb(255, 255, 255);
   border: none;
   padding: 8px;
   margin-right: 18px;
+  margin-top: 20px;
 }
 #clearbtn{
-  background-color: rgb(42, 92, 241);
+  background-color: rgb(12, 87, 247);
   border-radius: 20px;
   color: rgb(255, 255, 255);
   border: none;
   padding: 8px;
   margin-right: 18px;
+  margin-top: 20px;
 }
 #speak{
-  background-color: rgb(42, 92, 241);
+  background-color: rgb(12, 87, 247);
   border-radius: 20px;
   color: rgb(255, 255, 255);
   border: none;
   padding: 8px;
   margin-right: 18px;
+  margin-top: 20px;
 }
 #copybtn{
-  background-color: rgb(42, 92, 241);
+  background-color: rgb(12, 87, 247);
   border-radius: 20px;
   color: rgb(255, 255, 255);
   border: none;
   padding: 8px;
   margin-right: 18px;
+  margin-top: 20px;
+}
+#extraspaces{
+  background-color: rgb(12, 87, 247);
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px;
+  margin-right: 18px;
+  margin-top: 20px;
 }
