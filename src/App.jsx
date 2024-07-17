@@ -1,3 +1,4 @@
+import AskGemini from "./AskGemini";
 import Aboutus from "./aboutus";
 import Alert from "./Alert";
 import Navbar from "./Navbar";
@@ -5,6 +6,7 @@ import Textform from "./Textform";
 import Textarea from "./Textform"
 import React,{ useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 
 function App() {
@@ -48,6 +50,7 @@ function App() {
             /users/home --> Component 2 */}
           <Route path="/about" element={<Aboutus mode={mode}/>} />
           <Route path="/" element={<Textform mode={mode} showAlert={showAlert} />} />
+          <Route path="/AskGemini" element={<AskGemini mode={mode} showAlert={showAlert} />} />
         </Routes>
       </div>
       {/* <Textform mode={mode} showAlert={showAlert}/>
