@@ -10,17 +10,23 @@ function AskGemini(props) {
   };
 
   const generateAns = async () => {
+    const apiKey = import.meta.env.VITE_API_KEY;
+    
+
     try {
       const response = await axios({
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${import.meta.env.VITE_API_KEY}`,
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`,
         method: "post",
         data: {
           contents: [{ parts: [{ text: question }] }],
         },
       });
+      console.log("Response:", response); // Debugging: Check the full response
       setAnswer(response.data.candidates[0].content.parts[0].text);
+      setQuestion(""); // Clear the textarea
     } catch (error) {
       console.error("Error generating answer:", error);
+      console.log("Error response:", error.response); // Debugging: Check the error response
     }
   };
 
