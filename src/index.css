@@ -1,6 +1,6 @@
 #touppercasebtn{
   background-color: rgb(12, 87, 247);
-  border-radius: 20px;
+  border-radius: 15px;
   color: rgb(255, 255, 255);
   border: none;
   padding: 8px;
@@ -9,7 +9,7 @@
 }
 #clearbtn{
   background-color: rgb(12, 87, 247);
-  border-radius: 20px;
+  border-radius: 15px;
   color: rgb(255, 255, 255);
   border: none;
   padding: 8px;
@@ -18,7 +18,7 @@
 }
 #speak{
   background-color: rgb(12, 87, 247);
-  border-radius: 20px;
+  border-radius: 15px;
   color: rgb(255, 255, 255);
   border: none;
   padding: 8px;
@@ -27,7 +27,7 @@
 }
 #copybtn{
   background-color: rgb(12, 87, 247);
-  border-radius: 20px;
+  border-radius: 15px;
   color: rgb(255, 255, 255);
   border: none;
   padding: 8px;
@@ -36,7 +36,7 @@
 }
 #extraspaces{
   background-color: rgb(12, 87, 247);
-  border-radius: 20px;
+  border-radius: 15px;
   color: rgb(255, 255, 255);
   border: none;
   padding: 8px;
@@ -45,7 +45,34 @@
 }
 #genansbtn{
   background-color: rgb(12, 87, 247);
-  border-radius: 20px;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px;
+  margin-right: 18px;
+  margin-top: 20px;
+}
+#tolowercasebtn{
+  background-color: rgb(12, 87, 247);
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px;
+  margin-right: 18px;
+  margin-top: 20px;
+}
+#speachtotextbtn{
+  background-color: rgb(38, 166, 43);
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px;
+  margin-right: 18px;
+  margin-top: 20px;
+}
+#stoplisteningbtn{
+  background-color: rgb(193, 30, 30);
+  border-radius: 15px;
   color: rgb(255, 255, 255);
   border: none;
   padding: 8px;
