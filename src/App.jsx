@@ -3,7 +3,8 @@ import Aboutus from "./aboutus";
 import Alert from "./Alert";
 import Navbar from "./Navbar";
 import Textform from "./Textform";
-import Textarea from "./Textform"
+import Textarea from "./Textform";
+import OCR from "./OCR";
 import React,{ useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -51,6 +52,7 @@ function App() {
           <Route path="/about" element={<Aboutus mode={mode}/>} />
           <Route path="/" element={<Textform mode={mode} showAlert={showAlert} />} />
           <Route path="/AskGemini" element={<AskGemini mode={mode} showAlert={showAlert} />} />
+          <Route path="/OCR" element={<OCR mode={mode} showAlert={showAlert} />} />
         </Routes>
       </div>
       {/* <Textform mode={mode} showAlert={showAlert}/>

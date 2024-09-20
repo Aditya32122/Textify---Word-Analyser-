@@ -21,6 +21,9 @@ function Navbar(props){
         <li className="nav-item">
           <Link className="nav-link" to="/AskGemini">Ask Gemini</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/OCR">Image to Text</Link>
+        </li>
      
       </ul>
       {/* <form className="d-flex" role="search">

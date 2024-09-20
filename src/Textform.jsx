@@ -5,6 +5,13 @@ function Textform(props) {
   const [isListening, setIsListening] = useState(false);
   const recognitionRef = useRef(null);
 
+
+    // New state variables
+    const [findWord, setFindWord] = useState('');
+    const [replaceWord, setReplaceWord] = useState('');
+    const [targetLanguage, setTargetLanguage] = useState('es'); // Example: Spanish
+    const [readabilityScore, setReadabilityScore] = useState(0);
+
   useEffect(() => {
     if (!('webkitSpeechRecognition' in window)) {
       alert('Your browser does not support speech recognition. Try using Chrome.');
@@ -94,6 +101,22 @@ function Textform(props) {
     setText(newText.join(" "));
     props.showAlert("Extra spaces removed!", "success");
   };
+  //new
+  const handleReplace = () => {
+    const newText = text.replaceAll(findWord, replaceWord);
+    setText(newText);
+    props.showAlert("Text replaced successfully!", "success");
+  };
+
+  const calculateReadability = () => {
+    const sentences = text.split(/[.?!]\s/).filter((s) => s.length > 0).length;
+    const words = text.split(/\s+/).filter((word) => word.length > 0).length;
+    const syllables = text.match(/[aeiouy]{1,2}/g)?.length || 0; // Rough estimation of syllables
+
+    const fleschKincaidScore = 206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words);
+    setReadabilityScore(fleschKincaidScore.toFixed(2));
+  };
+
 
   return (
     <>
@@ -121,6 +144,50 @@ function Textform(props) {
           <button id="stoplisteningbtn" onClick={handleStopListening} disabled={!isListening}>Stop Listening</button>
         </div>
       </div>
+          
+                 {/* New Features */}
+                 <div className="features-container">
+            {/* Find and Replace Section */}
+            <div className="find-replace">
+              <input
+                type="text"
+                placeholder="Find"
+                className="input-text"
+                value={findWord}
+                onChange={(e) => setFindWord(e.target.value)}
+                style={{
+                  backgroundColor: props.mode === 'dark' ? '#13466e' : 'white',
+                  color: props.mode === 'dark' ? 'white' : '#042743'
+                }}
+              />
+              <input
+                type="text"
+                placeholder="Replace"
+                className="input-text"
+                value={replaceWord}
+                onChange={(e) => setReplaceWord(e.target.value)}
+                style={{
+                  backgroundColor: props.mode === 'dark' ? '#13466e' : 'white',
+                  color: props.mode === 'dark' ? 'white' : '#042743'
+                }}
+              />
+              <button id="Replace" className="btn" onClick={handleReplace}>
+                Replace
+              </button>
+            </div>
+
+            {/* Readability Score Section */}
+            <div className="readability-score">
+              <button className="btn" onClick={calculateReadability} id="calReadability">
+                Calculate Readability Score
+              </button>
+              <h3 style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>Readability Score: {readabilityScore}</h3>
+            </div>
+          </div>
+    
+    
+        
+    
       <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>
         <h2>Your Text Summary </h2>
         <p>{text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} words and {text.length} characters.</p>
